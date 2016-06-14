@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"
+    </head>
+    
+    <body>
+        <center>
+            <h3>
+            <p>
+                You get on a bus.
+            </p>
+            <p>
+                After awhile, you suddenly realize that you don't know how to get to the building.
+            </p>
+            <p>
+                You vaguely remember that a friend told you the building was on Mission street.
+            </p>
+            <p>
+                However, you looked it up last week and got a feeling that it's on Harrison street.
+            </p>
+            <p>
+                You know that in order to get to Harrison, you need to change bus route which would probably take a few minutes.
+            </p>
+            <p>
+                If you go to Mission, just stay on this bus.
+            </p>
+            <p>
+                Which way would you go?
+            </p>
+            <p>
+                <a href="bus_mission.html"> Mission </a>
+            </p>
+            <p>
+                <a href="bus_harrison.html"> Harrison </a>
+            </p>
+            </h3>
+        </center>
+        <h2>
+            Time = 9:47
+        </h2>
+        <center>
+            <button onclick="myFunction()">I'll give you a random number</button>
+            <p id="demo"></p>
+        </center>
+        <script>
+            var jscustom;
+            function myFunction() {
+                var i = Math.random();
+                if (i < 0.5) {
+                    jscustom = " choose 1";
+                } else {
+                    jscustom = " choose 2";
+                }
+                document.getElementById("demo").innerHTML = jscustom;
+            }
+            
+        </script>
+    </body>
+</html>

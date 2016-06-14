@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"
+    </head>
+    
+    <body>
+        <center>
+            <h3>
+            <p>
+                You run after the man.
+            </p>
+            <p>
+                With your athletic nature, it isn't difficult for you to catch up the gangster.
+            </p>
+            <p>
+                You manage to take back the briefcase but you can't hold the man.
+            </p>
+            <p>
+                You let the man run away because you need to hand the briefcase back to its owner and you're really late for the interview.
+            </p>
+            <p>
+                You give the businessman his briefcase and hurry on your way without even waiting for him to thank you.
+            </p>
+            <p>
+                <a href="run_chase_ending.html"> Next </a>
+            </p>
+            </h3>
+        </center>
+        <h2>
+            Time = 9:50
+        </h2>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css"
+    </head>
+    <body>
+        <center>
+            <h3>
+                <p>You wake up at 9:30am and remember that you have an interview at 10:00am. 
+                </p>
+                <p>If you do your morning routine, you may be late to your interview.</p>
+                <p><a href = "mainscene.html">Eat breakfast and brush your teeth</a>
+                </p>
+                <p><a href = "no_breakfast_main_choose.html">Go to interview</a>
+                </p>
+            </h3>
+           <center>
+            <button onclick="myFunction()">I'll give you a random number</button>
+            <p id="demo"></p>
+        </center>
+        <script>
+            var jscustom;
+            function myFunction() {
+                var i = Math.random();
+                if (i < 0.5) {
+                    jscustom = "choose 1";
+                } else {
+                    jscustom = "choose 2";
+                }
+                document.getElementById("demo").innerHTML = jscustom;
+            }
+            </script>
+        </center>
+        
+    <h6>
+        <p align="right"> .
+        </p>
+        <p align="right"> .
+        </p>
+        <p align="right"> There's an Easter Egg in this game.
+        </p>
+        <p align="right"> Try and find it if you can  ◕‿◕
+        </p>
+        <p align="right"> The Easter Egg will aprear once during gameplay and again if you get to the happy ending ^ </p>
+    </h6>
+    </body>
+</html>
