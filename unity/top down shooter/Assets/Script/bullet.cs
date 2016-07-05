@@ -6,12 +6,12 @@ public class bullet : MonoBehaviour {
 	private float timer;
 
 	void Start () {
-		transform.position = player.bulletPos;
+		transform.position = player_iso.bulletPos;
 		timer = Time.time;
 	}
 
 	void Update () {
-		transform.Translate (Vector3.right * Time.deltaTime * 10);
+		transform.Translate (Vector3.forward * Time.deltaTime * 10);
 		if (timer + 1 < Time.time) {
 			Destroy (gameObject);
 		}

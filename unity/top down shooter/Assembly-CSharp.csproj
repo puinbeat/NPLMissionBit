@@ -48,13 +48,15 @@
      <Compile Include="Assets\Script\aimpoint.cs" />
      <Compile Include="Assets\Script\boss.cs" />
      <Compile Include="Assets\Script\bullet.cs" />
-     <Compile Include="Assets\Script\cameraMovement.cs" />
+     <Compile Include="Assets\Script\cameraMovement_fps.cs" />
+     <Compile Include="Assets\Script\cameraMovement_iso.cs" />
      <Compile Include="Assets\Script\mop_1.cs" />
-     <Compile Include="Assets\Script\player.cs" />
+     <Compile Include="Assets\Script\player_fps.cs" />
+     <Compile Include="Assets\Script\player_iso.cs" />
      <Compile Include="Assets\Script\shadow1.cs" />
      <Compile Include="Assets\Script\skillR.cs" />
      <Compile Include="Assets\Script\skillR_Holder.cs" />
-     <Compile Include="Assets\test.cs" />
+     <Compile Include="Assets\test material\test.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>

@@ -14,9 +14,9 @@ public class skillR_Holder: MonoBehaviour {
 		transform.Translate (Vector3.right * Time.deltaTime * 5);
 		if (timer + 3 < Time.time) {
 			Destroy (gameObject);
-			player.castR = true;
+			player_iso.castR = true;
 		};
-		if (player.destroyR == true) {
+		if (player_iso.destroyR == true) {
 			Destroy (gameObject);
 		};
 	}
