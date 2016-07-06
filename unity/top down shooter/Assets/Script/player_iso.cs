@@ -18,6 +18,10 @@ public class player_iso : MonoBehaviour {
 	public static bool castR = true;
 	public static bool destroyR = false;
 
+	public static int spawEnemy = 1;
+	public GameObject enemyFab;
+	public Vector3 enemyPos;
+
 
 	void Start () {
 		bulletTimer = Time.time;
@@ -131,6 +135,10 @@ public class player_iso : MonoBehaviour {
 			destroyR = false;
 			timerR = Time.time;
 		};
-		Debug.Log (mousePos);
+		if (spawEnemy <= 10) {
+			enemyPos =  new Vector3 (Random.Range (transform.position.x - 6, transform.position.x + 6), -3, Random.Range(transform.position.x - 6, transform.position.x + 6));
+			Instantiate (enemyFab, enemyPos, transform.rotation);
+			spawEnemy += 1;
+		}
 	}
 }

@@ -19,8 +19,7 @@ public class bullet : MonoBehaviour {
 
 	void OnTriggerEnter(Collider collider) {
 		if (collider.gameObject.CompareTag("mop_1")) {
-			transform.position = new Vector3 (100, 100, 100);
-//			Destroy(gameObject);
+			Destroy(gameObject);
 		};
 	}
 }
