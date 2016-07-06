@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class cameraMovement : MonoBehaviour {
+public class cameraMovement_iso : MonoBehaviour {
 
 	public GameObject player;
 

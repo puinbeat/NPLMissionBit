@@ -10,8 +10,8 @@ public class bullet : MonoBehaviour {
 		timer = Time.time;
 	}
 
-	void Update () {
-		transform.Translate (Vector3.forward * Time.deltaTime * 10);
+	void FixedUpdate () {
+		transform.Translate (Vector3.forward * 0.8f);
 		if (timer + 1 < Time.time) {
 			Destroy (gameObject);
 		}
@@ -19,7 +19,8 @@ public class bullet : MonoBehaviour {
 
 	void OnTriggerEnter(Collider collider) {
 		if (collider.gameObject.CompareTag("mop_1")) {
-			Destroy(gameObject);
+			transform.position = new Vector3 (100, 100, 100);
+//			Destroy(gameObject);
 		};
 	}
 }

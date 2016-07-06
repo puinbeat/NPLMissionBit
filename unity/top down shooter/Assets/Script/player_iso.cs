@@ -7,7 +7,7 @@ public class player_iso : MonoBehaviour {
 	public GameObject shadow1;
 	public GameObject bulletFab;
 	public GameObject gunHead;
-	public Vector3 mousePos;
+	Vector3 mousePos;
 	public GameObject skillRFab;
 	public static Vector3 bulletPos;
 	float bulletTimer;
@@ -119,8 +119,10 @@ public class player_iso : MonoBehaviour {
 		};
 
 		// Instantiate
-		if (Input.GetKey(KeyCode.Space) && bulletTimer + 0.1 < Time.time) {
+		if (Input.GetKey(KeyCode.Space) && bulletTimer + 0.5 < Time.time) {
+			Instantiate (bulletFab, transform.position, Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y - 5, transform.eulerAngles.z));
 			Instantiate (bulletFab, transform.position, transform.rotation);
+			Instantiate (bulletFab, transform.position, Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y + 5, transform.eulerAngles.z));
 			bulletTimer = Time.time;
 		};
 		if (Input.GetKeyDown(KeyCode.R) && castR == true && timerR + 0.1 < Time.time) {
