@@ -19,8 +19,11 @@ public class player_iso : MonoBehaviour {
 	public static bool destroyR = false;
 
 	public static int spawEnemy = 1;
+	public static Vector3 playerPosition;
 	public GameObject enemyFab;
 	public Vector3 enemyPos;
+
+	public bool grounded = true;
 
 
 	void Start () {
@@ -33,17 +36,23 @@ public class player_iso : MonoBehaviour {
 		bulletPos = new Vector3 (gunHead.transform.position.x, gunHead.transform.position.y, gunHead.transform.position.z);
 
 		// movement
-		if (Input.GetKey(KeyCode.D)) {
-			transform.position = new Vector3 (transform.position.x + pointOne, transform.position.y, transform.position.z);
-		};
-		if (Input.GetKey(KeyCode.A)) {
-			transform.position = new Vector3 (transform.position.x - pointOne, transform.position.y, transform.position.z);
-		};
-		if (Input.GetKey(KeyCode.W)) {
-			transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z + pointOne);
-		};
-		if (Input.GetKey(KeyCode.S)) {
-			transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z - pointOne);
+		if (grounded == true) {
+			if (Input.GetKey (KeyCode.D)) {
+				transform.position = new Vector3 (transform.position.x + pointOne, transform.position.y, transform.position.z);
+			}
+			;
+			if (Input.GetKey (KeyCode.A)) {
+				transform.position = new Vector3 (transform.position.x - pointOne, transform.position.y, transform.position.z);
+			}
+			;
+			if (Input.GetKey (KeyCode.W)) {
+				transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z + pointOne);
+			}
+			;
+			if (Input.GetKey (KeyCode.S)) {
+				transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z - pointOne);
+			}
+			;
 		};
 
 		// rotation
@@ -139,6 +148,14 @@ public class player_iso : MonoBehaviour {
 			enemyPos =  new Vector3 (Random.Range (transform.position.x - 6, transform.position.x + 6), -3, Random.Range(transform.position.x - 6, transform.position.x + 6));
 			Instantiate (enemyFab, enemyPos, transform.rotation);
 			spawEnemy += 1;
-		}
+		};
+		Debug.Log (spawEnemy);
+		playerPosition = transform.position;
+	}
+
+	void OnTriggerEnter(Collider collider) {
+		if (collider.gameObject.CompareTag("Respawn") == false) {
+			grounded = false;
+		};
 	}
 }

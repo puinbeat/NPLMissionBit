@@ -3,14 +3,13 @@ using System.Collections;
 
 public class mop_1 : MonoBehaviour {
 
-	public GameObject player;
 
 	void Start () {
 		
 	}
 
 	void FixedUpdate () {
-		transform.position = Vector3.MoveTowards (transform.position, player.transform.position, Time.deltaTime * 2);
+		transform.position = Vector3.MoveTowards (transform.position, player_iso.playerPosition, Time.deltaTime * 2);
 	}
 
 	void OnTriggerEnter(Collider collider) {

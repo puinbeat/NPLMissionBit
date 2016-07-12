@@ -49,6 +49,7 @@
      <Compile Include="Assets\Script\bullet.cs" />
      <Compile Include="Assets\Script\cameraMovement_fps.cs" />
      <Compile Include="Assets\Script\cameraMovement_iso.cs" />
+     <Compile Include="Assets\Script\cubes.cs" />
      <Compile Include="Assets\Script\mop_1.cs" />
      <Compile Include="Assets\Script\player_fps.cs" />
      <Compile Include="Assets\Script\player_iso.cs" />
